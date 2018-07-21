@@ -19,22 +19,22 @@ then
 echo 'already exist llvm source code'
 else
 wget -c http://releases.llvm.org/${version}/llvm-${version}.src.tar.${COMP_FORMAT}
-tar -xf llvm-${version}.src.tar${COMP_FORMAT}
+tar -xf llvm-${version}.src.tar.${COMP_FORMAT}
 fi
 if test -f llvm-${version}.src/tools/clang
 then
 echo 'already exist clang'
 else
-wget -c http://releases.llvm.org/${version}/${CLANG_NAME}-${version}.src.tar${COMP_FORMAT}
-tar -xf ${CLANG_NAME}-${version}.src.tar${COMP_FORMAT}
+wget -c http://releases.llvm.org/${version}/${CLANG_NAME}-${version}.src.tar.${COMP_FORMAT}
+tar -xf ${CLANG_NAME}-${version}.src.tar.${COMP_FORMAT}
 mv ${CLANG_NAME}-${version}.src llvm-${version}.src/tools/clang
 fi
 if test -f llvm-${version}.src/projects/compiler-rt
 then
 echo 'already exist compiler-rt'
 else
-wget -c http://releases.llvm.org/${version}/compiler-rt-${version}.src.tar${COMP_FORMAT}
-tar -xf compiler-rt-${version}.src.tar${COMP_FORMAT}
+wget -c http://releases.llvm.org/${version}/compiler-rt-${version}.src.tar.${COMP_FORMAT}
+tar -xf compiler-rt-${version}.src.tar.${COMP_FORMAT}
 mv compiler-rt-${version}.src llvm-${version}.src/projects/compiler-rt
 fi
 cd ..
